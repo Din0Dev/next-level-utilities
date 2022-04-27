@@ -208,4 +208,17 @@ export const patterns: PatternModel[] = [
     description: "Matches valid semantic versioning.",
     tags: "semver,semantic,versioning,version",
   },
+  {
+    name: "Semver",
+    regex:
+      /^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-((?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/,
+    description: "Matches valid semantic versioning.",
+    tags: "semver,semantic,versioning,version",
+  },
+  {
+    name: "Only Text And Number",
+    regex: /^[a-zA-Z0-9ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\ ]*$/,
+    description: "Matches valid number and text Viet Nam",
+    tags: "text,number,vietnam",
+  }
 ] ;
