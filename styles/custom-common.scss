@@ -10,3 +10,24 @@
     flex: 1;
   }
 }
+
+.color-white {
+  color: var(--white);
+}
+
+.bg-grey-29 {
+  background-color: var(--grey-29);
+}
+
+.divider-common {
+  border-bottom :1px solid var(--grey);
+}
+
+.container {
+  background-color: var(--black);
+  color: var(--white)
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

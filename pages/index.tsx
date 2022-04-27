@@ -6,45 +6,19 @@ import { List } from "interfaces";
 import todoServices from "services/todoServices";
 import useSagaCreators from "hooks/useSagaCreators";
 import TodoModel from "models/todo.model";
+import { Typography } from "@mui/material";
 
 interface IHome {
   todoList: List<TodoModel>;
 }
 
 const Home: NextPage<IHome> = ({ todoList }) => {
-  const { dispatch } = useSagaCreators();
-  const { data, loading } = useGetTodoList();
-  console.log(data)
-
-  useEffect(() => {
-    //* Example dispatch action redux
-  }, [dispatch]);
 
   return (
     <div>
-      {todoList.map((todo) => (
-        <div key={todo.id}>
-          {/* Example static path */}
-          {/* <Link href={`/todo/${todo.id}`}> */}
-          <Link href={`/todoServerSide/${todo.id}`}>
-            <a>
-              {todo.id} - {todo.title}
-            </a>
-          </Link>
-        </div>
-      ))}
+      <Typography>Hí anh em ! Đây là nơi tổng hợp hỗ trợ cho anh em về Regex,Helper các kiểu. Nói chung là anh Đôn bảo là làm cái này cho anh em tham khảo học hỏi. Thế nhé !</Typography>
     </div>
   );
 };
-
-export async function getStaticProps({ locale, locales }: any) {
-  const response = await todoServices.getTodos();
-  const todoList = response?.data || [];
-  return {
-    props: {
-      todoList,
-    }, // will be passed to the page component as props
-  };
-}
 
 export default Home;
