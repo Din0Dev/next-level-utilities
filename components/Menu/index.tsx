@@ -16,7 +16,7 @@ import HomeIcon from "@mui/icons-material/Home";
 
 interface MenuI {
   open: boolean;
-  handleDrawerClose: Function;
+  handleDrawerClose: () => void;
 }
 
 const Menu = (props: MenuI) => {

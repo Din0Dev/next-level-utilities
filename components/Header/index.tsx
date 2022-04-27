@@ -9,7 +9,7 @@ import { Fragment } from "react";
 
 interface HeaderI {
   open: boolean;
-  handleDrawerOpen: Function;
+  handleDrawerOpen: () => void;
   heading: String;
 }
 
