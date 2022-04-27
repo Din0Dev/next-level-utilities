@@ -8,9 +8,9 @@ import AppBar from "components/MaterialComponents/Appbar";
 import { Fragment } from "react";
 
 interface HeaderI {
-  open: boolean;
-  handleDrawerOpen: () => void;
-  heading: String;
+  open?: boolean;
+  handleDrawerOpen?: () => void;
+  heading?: String;
 }
 
 const Header = (props: HeaderI) => {
