@@ -16,18 +16,18 @@
 }
 
 .bg-grey-29 {
-  background-color: var(--grey-29);
+  background-color: var(--grey-29) !important;
 }
 
 .divider-common {
-  border-bottom :1px solid var(--grey);
+  border-bottom :1px solid var(--grey) !important;
 }
 
 .container {
-  background-color: var(--black);
-  color: var(--white)
+  background-color: var(--black) !important;
+  color: var(--white) !important;
 }
 
 .cursor-pointer{
-  cursor: pointer;
+  cursor: pointer !important;
 }
