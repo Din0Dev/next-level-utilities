@@ -17,7 +17,7 @@ const Header = (props: HeaderI) => {
   const {
     open = false,
     handleDrawerOpen = () => {},
-    heading = "Utility",
+    heading = "Utilities",
   } = props;
   //! State
   const theme = useTheme();

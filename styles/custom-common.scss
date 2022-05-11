@@ -15,12 +15,16 @@
   color: var(--white) !important;
 }
 
+.color-green {
+  color: var(--green) !important;
+}
+
 .bg-grey-29 {
   background-color: var(--grey-29) !important;
 }
 
 .divider-common {
-  border-bottom :1px solid var(--grey) !important;
+  border-bottom: 1px solid var(--grey) !important;
 }
 
 .container {
@@ -28,6 +32,31 @@
   color: var(--white) !important;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer !important;
+}
+
+.m-16 {
+  margin: 16px;
+}
+
+.my-16 {
+  margin: 0 16px;
+}
+
+.mx-16 {
+  margin: 16px 0;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.btn-outlined{
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.btn-containted{
+  background: var(--blue);
+  color: var(--bg-color);
 }

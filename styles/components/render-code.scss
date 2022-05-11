@@ -1,0 +1,46 @@
+.render-code{
+  position: relative;
+  &__provider{
+  }
+  &__editor{
+    opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  &__button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    &_change-type{
+      position: relative;
+      border-radius: 4px;
+      width: 27px;
+      height: 27px;
+      span{
+        position: absolute;
+        bottom: 0;
+        right: 2px;
+        font-size: 12px;
+        font-weight: bold;
+
+      }
+    }
+    .btn-js{
+      background-color: var(--yellow-javascript);
+      border: 2px solid var(--yellow-javascript);
+      span{
+        color: var(--black);
+      }
+    }
+    .btn-ts{
+      background-color: var(--blue-typescript);
+      border: 2px solid var(--blue-typescript);
+      span{
+        color: var(--white);
+      }
+    }
+  }
+}

@@ -12,8 +12,9 @@ import DividerComponents from "components/MaterialComponents/DividerComponents";
 import baseUrl from "constants/baseUrl";
 import Link from "next/link";
 import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
+import StorageIcon from '@mui/icons-material/Storage';
 import HomeIcon from "@mui/icons-material/Home";
-
+import AssignmentIcon from '@mui/icons-material/Assignment';
 interface MenuI {
   open: boolean;
   handleDrawerClose: () => void;
@@ -35,6 +36,16 @@ const Menu = (props: MenuI) => {
       text: "Regex",
       href: baseUrl.REGEX_PAGE,
     },
+    {
+      icon: <StorageIcon />,
+      text: "Custom Hook",
+      href: baseUrl.CUSTOM_HOOK_PAGE,
+    },
+    {
+      icon: <AssignmentIcon/>,
+      text: "Lesson",
+      href: baseUrl.LESSON_PAGE,
+    }
   ];
 
   //! Render
@@ -53,7 +64,7 @@ const Menu = (props: MenuI) => {
       <DividerComponents className="" />
       <List>
         {listMenu.map((el, index) => (
-          <Link key={index} href={el.href}>
+          <Link key={index} href={el.href} passHref>
             <ListItemButton
               sx={{
                 minHeight: 48,

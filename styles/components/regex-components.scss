@@ -1,4 +1,4 @@
-.card-components {
+.regex-components {
   background-color: var(--black-20) !important;
   color: var(--white) !important;
   .desc {
@@ -9,28 +9,22 @@
     width: 100%;
     background-color: var(--black);
     input {
-      padding: 14px 10px;
+      padding: 14px 10px ;
       border: 1px solid var(--grey);
       color: var(--green);
     }
   }
-  .card-header {
-    &__title {
+  .regex-header{
+    &__title{
       color: var(--blue);
       font-weight: bold;
     }
   }
-  .card-content {
-    padding: 0;
-    &__children {
-      padding: 16px;
-    }
-  }
-  .card-actions {
+  .regex-actions{
     flex-direction: column;
-    margin: 0 16px;
+    padding: 0 16px;
     .regex-test {
-      &__title {
+      &__title{
         width: 100%;
         margin-bottom: 5px;
         text-align: left;
@@ -38,12 +32,12 @@
       width: 100%;
       background-color: var(--grey-29);
       input {
-        padding: 10px 8px;
+        padding: 10px 8px ;
         border: 1px solid var(--grey);
         color: var(--white);
       }
     }
-    .regex-output {
+    .regex-output{
       font-family: Arial, Helvetica, sans-serif;
       margin: 10px 0;
       width: 100%;

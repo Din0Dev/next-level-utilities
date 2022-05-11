@@ -1,0 +1,11 @@
+.lesson {
+  .card-content {
+    &__collapse {
+      > div {
+        > div {
+          position: relative;
+        }
+      }
+    }
+  }
+}

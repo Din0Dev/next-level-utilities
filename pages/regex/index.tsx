@@ -1,6 +1,6 @@
 import { Paper, TextField, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import CardComponents from "components/MaterialComponents/CardComponents";
+import RegexComponents from "components/RegexComponents";
 import {patterns} from "data/regex"
 
 const RegexPage = () => {
@@ -19,7 +19,7 @@ const RegexPage = () => {
       >
         {patterns.map((el, index) => (
           <Grid item xs={12} sm={4} md={4} key={el.name}>
-            <CardComponents
+            <RegexComponents
               title={el.name}
               description={el.description}
               regexValue={el.regex}
