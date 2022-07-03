@@ -15,6 +15,9 @@ import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstruct
 import StorageIcon from '@mui/icons-material/Storage';
 import HomeIcon from "@mui/icons-material/Home";
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
+import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 interface MenuI {
   open: boolean;
   handleDrawerClose: () => void;
@@ -45,6 +48,21 @@ const Menu = (props: MenuI) => {
       icon: <AssignmentIcon/>,
       text: "Lesson",
       href: baseUrl.LESSON_PAGE,
+    },
+    {
+      icon: <ListAltIcon/>,
+      text: 'JavaScript Questions',
+      href: baseUrl.QUESTIONS_JAVASCRIPT
+    },
+    {
+      icon: <NoteAltIcon />,
+      text: 'Remember Javascript',
+      href: baseUrl.CHEAT_SHEET_JAVASCRIPT
+    },
+    {
+      icon: <StickyNote2Icon />,
+      text: 'Javascript Conventions',
+      href: baseUrl.JAVASCRIPT_CONVENTIONS
     }
   ];
 

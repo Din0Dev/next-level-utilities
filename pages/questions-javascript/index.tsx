@@ -1,29 +1,26 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import CardComponents from "components/MaterialComponents/CardComponents";
-import { lesson } from "data/lesson";
+import { QuestionsJavascriptData } from "data/questions-javascript";
 import RenderCode from "./components/RenderCode";
-import RenderActions from "./components/RenderActions";
 import InputSearch from "components/MaterialComponents/InputSearch";
 import Timer from "helpers/timer";
-import DialogComponents from "components/MaterialComponents/DialogComponents";
-import RenderTestExam from "./components/RenderTestExam";
 const propTypes = {};
 
-interface LessonI {}
+interface QuestionsJavaScriptI {}
 
-const Lesson = (props: LessonI) => {
+const QuestionsJavaScript = (props: QuestionsJavaScriptI) => {
   //! State
   const timer = useRef(new Timer());
-  const [lessonsLocal, setLessonsLocal] = useState(lesson);
+  const [lessonsLocal, setLessonsLocal] = useState(QuestionsJavascriptData);
   const [valueSearch, setValueSearch] = useState("");
 
   useEffect(() => {
     if (valueSearch) {
       timer.current.debounce(() => {
         setLessonsLocal((prev) => {
-          const nextCustomHooks = lesson.filter((el) => {
+          const nextCustomHooks = QuestionsJavascriptData.filter((el) => {
             return el.title.toLowerCase().includes(valueSearch.toLowerCase());
           });
 
@@ -31,7 +28,7 @@ const Lesson = (props: LessonI) => {
         });
       }, 300);
     } else {
-      setLessonsLocal(lesson);
+      setLessonsLocal(QuestionsJavascriptData);
     }
   }, [valueSearch]);
 
@@ -45,11 +42,11 @@ const Lesson = (props: LessonI) => {
 
   //! Render
   return (
-    <div className="lesson">
+    <div className="questions-javascript">
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <Typography variant="h4" marginBottom={4}>
-            Lessons
+            Những câu hỏi JavaScript trình độ Advanced
           </Typography>
         </Grid>
         <Grid item xs={4}>
@@ -71,10 +68,33 @@ const Lesson = (props: LessonI) => {
           <Grid item xs={12} sm={12} md={12} key={el.title}>
             <CardComponents
               title={el.title}
-              description={el.question}
+              description={
+                <div className="desc m-16">
+                  <span>{el.question}</span>
+
+                  <RenderCode code={el.codeQuestion} />
+
+                  <div className="select">
+                    <ol>
+                      {el.select.map((el, index) => {
+                        return <li key={index}>{el}</li>;
+                      })}
+                    </ol>
+                  </div>
+                </div>
+              }
               childrenCollapse={
                 <div className="m-16">
-                  <RenderCode code={el.result} codeTS={el?.resultTS} />
+                  <CardComponents
+                    title={"Đáp Án"}
+                    childrenCollapse={
+                      <div className="result m-16">
+                        <textarea className="result__textarea" disabled>
+                          {el.result}
+                        </textarea>
+                      </div>
+                    }
+                  />
                 </div>
               }
             />
@@ -85,5 +105,5 @@ const Lesson = (props: LessonI) => {
   );
 };
 
-Lesson.propTypes = propTypes;
-export default Lesson;
+QuestionsJavaScript.propTypes = propTypes;
+export default QuestionsJavaScript;

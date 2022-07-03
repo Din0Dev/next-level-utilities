@@ -35,6 +35,9 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-syntax-jsx": "^7.17.12",
     "@types/nprogress": "^0.2.0",
     "@types/react": "17.0.26",
     "@types/redux-logger": "^3.0.9",

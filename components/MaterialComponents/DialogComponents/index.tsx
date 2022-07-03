@@ -59,6 +59,7 @@ const DialogComponents = (props: DialogComponentsI) => {
         onClose={handleClose}
         PaperComponent={PaperComponent}
         aria-labelledby="draggable-dialog-title"
+        className="draggable-dialog"
       >
         <DialogTitle style={{ cursor: "move" }} id="draggable-dialog-title">
           {dialogTitle}
@@ -66,7 +67,7 @@ const DialogComponents = (props: DialogComponentsI) => {
         <DialogContent>
           <DialogContentText>{dialogContent}</DialogContentText>
         </DialogContent>
-        <DialogActions>
+        <DialogActions style={{justifyContent: 'flex-start'}}>
           <Button autoFocus onClick={handleClose}>
             Cancel
           </Button>

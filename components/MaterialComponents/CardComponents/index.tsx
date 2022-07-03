@@ -12,7 +12,7 @@ import Collapse from "@mui/material/Collapse";
 
 interface CardComponentsI {
   title: string;
-  description?: string;
+  description?: JSX.Element[] | JSX.Element | string;
   regexValue?: string;
   childrenContent?: JSX.Element[] | JSX.Element;
   childrenAction?: JSX.Element[] | JSX.Element;
